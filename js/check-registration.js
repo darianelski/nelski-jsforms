@@ -63,37 +63,22 @@ $(document).ready(function(){
 						}
 					}
 
-					// Проверка на существующий email
+					// Проверка на существующий email 
+					let inpMail = $("input[type='email']").val(); 
 
-					if($("input[type='email']").val().toLowerCase() ==='mail@mail.com'){ 
-						console.log('Упс, занято'); 
-						$('#notify--present').show();
-						valid = false;
+					if(inpMail.toLowerCase() ==='mail@mail.com'){ 
+					console.log('Упс, занято'); 
+					$('#notify--present').show(); 
+					valid = false; 
 
-					} else { 
-						formGroup.find('#notify--present').remove(); 
-						console.log('Свободно!'); 
-						valid = true;
+					} else if(inpMail.trim() === '') { 
+					console.log('Введите данные!'); 
+					valid = false; 
+					}else{ 
+					formGroup.find('#notify--present').remove(); 
+					console.log('Свободно!'); 
+					valid = true; 
 					}
-
-
-
-					// if (input.attr('type').toLowerCase() === 'email'){
-					// 	if (value !== '') {
-					// 		var validEmail = 'mail@mail.com';
-
-					// 		if(value == validEmail) {
-					
-					// 			//invalidEmail.css('display','none');
-					// 			console.log('Email is VALID');
-					// 		} else {
-					// 			formGroup.find('#notify--present').remove();
-					// 			invalidEmail.css('display','block');
-					// 			valid = false;
-					// 			console.log('invalidEmail is INVALID');
-					// 		}
-					// 	}
-					// }
 
 
 					// скрыть ошибку по клику на input
