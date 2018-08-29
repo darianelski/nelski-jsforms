@@ -63,7 +63,6 @@ $(document).ready(function(){
 					}
 
 					// Проверка на существующий email
-
 					if($("input[type='email']").val().toLowerCase() ==='mail@mail.com'){ 
 						console.log('Упс, занято'); 
 						$('#notify--present').show();
