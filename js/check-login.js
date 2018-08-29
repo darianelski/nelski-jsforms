@@ -8,7 +8,6 @@ $(document).ready(function(){
 			init: function() {
 				//вызов внутренних функций
 				this._setUpListeners(); //прослушка событий
-				$("#notify--present").hide();
 			},
 
 			_setUpListeners: function() {
